@@ -22,6 +22,7 @@ cryptography==2.2.2
 
 #### How to run this example
 
+- Create a virtualenv and install the wheel file from the lib/ folder
 - Start the server by running the command<br/> 
 ```python server.py```
 - In this example, there are 4 urls, 2 are authenticated and 2 are public
