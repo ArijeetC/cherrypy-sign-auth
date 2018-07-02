@@ -3,16 +3,16 @@
 
 #### Files Added
 
-cherrypy/lib/auth_sign.py
-cherrypy/test/test_auth_sign.py
-cherrypy/test/test_private.pem
+cherrypy/lib/auth_sign.py<br/>
+cherrypy/test/test_auth_sign.py<br/>
+cherrypy/test/test_private.pem<br/>
 
 
 #### Files Modified
 
-cherrypy/_cptools.py
-setup.py
-tox.ini
+cherrypy/_cptools.py<br/>
+setup.py<br/>
+tox.ini<br/>
 
 
 #### Extra Python Libraries Needed
@@ -26,8 +26,8 @@ cryptography==2.2.2
 - Private key will be used in client side for signing the message
 - Public key will be used in server side to verify the signature
 - Add the following lines to your server config dict
-        ```'tools.auth_sign.on': True,```
-        ```'tools.auth_sign.realm': host,```
+        ```'tools.auth_sign.on': True,```<br/>
+        ```'tools.auth_sign.realm': host,```<br/>
         ```'tools.auth_sign.key_file': 'keys/public.pem',
         ```
 - For client side signature generation, refer to the client.py file
