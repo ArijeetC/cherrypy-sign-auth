@@ -20,7 +20,24 @@ tox.ini<br/>
 cryptography==2.2.2
 
 
-#### How to use this Tool
+#### How to run this example
+
+- Start the server by running the command 
+```python server.py```
+- In this example, there are 4 urls, 2 are authenticated and 2 are public
+- The four urls are :
+  * http://localhost:8081/ (public url)
+  * http://localhost:8081/health (public url)
+  * http://localhost:8081/app/ (auth url)
+  * http://localhost:8081/app/health (auth url)
+- To send requests to each of these urls, we will use the client.py file
+- The client.py generates a signature and attaches it to request header
+- To send a request to a url, run the following command
+```python client.py <URL>```
+- The response will be displayed in the console
+
+
+#### How this CherryPy Tool works
 
 - First generate RSA private and public key pair
 - Private key will be used in client side for signing the message

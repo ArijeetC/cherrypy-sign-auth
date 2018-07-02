@@ -34,7 +34,7 @@ def generate_signature(time_millis):
 
 
 
-def send_request(url="http://localhost:8081/app", method="GET"):
+def send_request(url="http://localhost:8081/app", method="NOAUTH"):
 
     time_millis = str(int(round(time.time() * 1000)))
 
@@ -44,10 +44,15 @@ def send_request(url="http://localhost:8081/app", method="GET"):
 
     headers = {'signature': signature, 'message': time_millis}
 
-    if method == "GET":
+    if "app" in url:
+        method = "AUTH"
+
+    if method == "AUTH":
         resp = requests.get(url, headers=headers)
+        print("\n Request with auth succeeded")
     else:
-        resp = requests.post(url, headers=headers)
+        resp = requests.get(url)
+        print("\n Request without auth succeeded")
 
     return resp
 
@@ -55,7 +60,7 @@ def send_request(url="http://localhost:8081/app", method="GET"):
 def main(url):
 
     resp = send_request(url=url)
-    print(resp.content.decode())
+    print("\n Response - ", resp.content.decode(), "\n")
 
 
 if __name__=='__main__':
