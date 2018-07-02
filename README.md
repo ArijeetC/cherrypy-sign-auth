@@ -25,7 +25,7 @@ cryptography==2.2.2
 - First generate RSA private and public key pair
 - Private key will be used in client side for signing the message
 - Public key will be used in server side to verify the signature
-- Add the following lines to your server config dict
+- Add the following lines to your server config dict<br/>
         ```'tools.auth_sign.on': True,```<br/>
         ```'tools.auth_sign.realm': host,```<br/>
         ```'tools.auth_sign.key_file': 'keys/public.pem',
