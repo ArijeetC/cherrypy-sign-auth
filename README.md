@@ -22,7 +22,7 @@ cryptography==2.2.2
 
 #### How to run this example
 
-- Start the server by running the command 
+- Start the server by running the command<br/> 
 ```python server.py```
 - In this example, there are 4 urls, 2 are authenticated and 2 are public
 - The four urls are :
@@ -32,7 +32,7 @@ cryptography==2.2.2
   * http://localhost:8081/app/health (auth url)
 - To send requests to each of these urls, we will use the client.py file
 - The client.py generates a signature and attaches it to request header
-- To send a request to a url, run the following command
+- To send a request to a url, run the following command<br/>
 ```python client.py <URL>```
 - The response will be displayed in the console
 
